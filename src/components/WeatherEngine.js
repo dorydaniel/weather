@@ -41,8 +41,8 @@ const WeatherEngine = ({ location }) => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    getWeather(query);
     setError(false);
+    getWeather(query);
   };
 
   useEffect(() => {
