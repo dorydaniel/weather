@@ -9,6 +9,11 @@ function App() {
       <WeatherEngine location="brazil" />
       <WeatherEngine location="antarktika" />
       <WeatherEngine location="qatar" />
+      {/* <img
+        src={"imgs/Dust-2x.png"}
+        alt=""
+        style={{ width: "200px", height: "200px" }}
+      /> */}
     </div>
   );
 }

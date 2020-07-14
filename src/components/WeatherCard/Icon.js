@@ -9,47 +9,47 @@ const Icon = ({ condition }) => {
   var icon = "";
   switch (condition) {
     case "Clouds":
-      icon = `Mostly Cloudy`;
+      icon = `./imgs/Mostly Cloudy-2x.png`;
       break;
     case "Clear":
-      icon = `Mostly Sunny`;
+      icon = `./imgs/Mostly Sunny-2x.png`;
       break;
     case "Haze":
-      icon = `Haze`;
+      icon = `./imgs/Haze-2x.png`;
       break;
     case "Hail":
-      icon = `Hail`;
+      icon = `./imgs/Hail-2x.png`;
       break;
     case "Fog":
-      icon = `Fog`;
+      icon = `./imgs/Fog-2x.png`;
       break;
     case "Tornado":
-      icon = `Tornado`;
+      icon = `./imgs/Tornado-2x.png`;
       break;
     case "Dust":
-      icon = `Dust`;
+      icon = `./imgs/Dust-2x.png`;
       break;
     case "Mist":
-      icon = `Fog`;
+      icon = `./imgs/Fog-2x.png`;
       break;
     case "Snow":
-      icon = `Snow`;
+      icon = `./imgs/Snow-2x.png`;
       break;
     case "Rain":
-      icon = `Rain`;
+      icon = `./imgs/Rain-2x.png`;
       break;
     case "Drizzle":
-      icon = `Drizzle`;
+      icon = `./imgs/Drizzle-2x.png`;
       break;
     case "Thunderstorm":
-      icon = `Severe Thunderstorm`;
+      icon = `./imgs/Severe Thunderstorm-2x.png`;
       break;
     default:
-      icon = `Fog`;
+      icon = `./imgs/Fog-2x.png`;
       break;
   }
 
-  return <Icon src={`./img/${icon}-2x.png`} alt="Weather Icon" />;
+  return <Icon src={icon} alt="Weather Icon" />;
 };
 
 export default Icon;
