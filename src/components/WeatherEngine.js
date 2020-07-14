@@ -42,6 +42,7 @@ const WeatherEngine = ({ location }) => {
   const handleClick = (e) => {
     e.preventDefault();
     getWeather(query);
+    setError(false);
   };
 
   useEffect(() => {
@@ -57,7 +58,6 @@ const WeatherEngine = ({ location }) => {
         country={weather.country}
         isLoading={isLoading}
         error={error}
-        resetError={() => setError(false)}
       />
       <form>
         <input

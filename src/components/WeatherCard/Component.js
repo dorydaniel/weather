@@ -5,15 +5,7 @@ import Location from "./Location";
 import Icon from "./Icon";
 import Condition from "./Condition";
 
-const WeatherCard = ({
-  temp,
-  condition,
-  city,
-  country,
-  isLoading,
-  error,
-  resetError,
-}) => {
+const WeatherCard = ({ temp, condition, city, country, isLoading, error }) => {
   let highColor;
   let lowColor;
   if (temp > 12) {
@@ -58,10 +50,6 @@ const WeatherCard = ({
           <h2>Invalid!</h2>
           <br />
           <h3>Please try again</h3>
-          <br />
-          <button style={{ padding: "0% 1%" }} onClick={resetError}>
-            OK
-          </button>
         </ErrorDiv>
       ) : (
         <>
