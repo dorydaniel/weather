@@ -50,7 +50,7 @@ const Icon = ({ condition }) => {
   }
 
   // return <Icon src={window.location.origin + icon} alt="Weather Icon" />;
-  return <Icon src={icon} alt="Weather Icon" />;
+  return <Icon src={process.env.PUBLIC_URL + icon} alt="Weather Icon" />;
 };
 
 export default Icon;
