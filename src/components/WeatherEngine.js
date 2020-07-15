@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
+import axios from "axios";
 
 import WeatherCard from "./WeatherCard/Component";
 
@@ -23,15 +24,15 @@ const WeatherEngine = ({ location }) => {
   const getWeather = async (q) => {
     setIsLoading(true);
     try {
-      const apiRes = await fetch(
+      const res = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=${q}&units=metric&APPID=d265e4ce81a183424e3f69a1dbb0bb9b`
       );
-      const resJson = await apiRes.json();
+      const data = res.data;
       setWeather({
-        city: resJson.name,
-        country: resJson.sys.country,
-        temp: resJson.main.temp,
-        condition: resJson.weather[0].main,
+        city: data.name,
+        country: data.sys.country,
+        temp: data.main.temp,
+        condition: data.weather[0].main,
       });
     } catch (error) {
       setError(true);
